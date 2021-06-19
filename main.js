@@ -35,7 +35,8 @@ function getposes(results) {
 
 function draw() {
     image(video,0,0,500,500);
-    fill("red")
+    /*fill("red")
     stroke("brown")
-    circle(nosex, nosey, 30)
+    circle(nosex, nosey, 30)*/
+    image(img,nosex-15,nosey-15,30,30)
 }
