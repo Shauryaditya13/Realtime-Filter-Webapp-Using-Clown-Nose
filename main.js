@@ -2,6 +2,7 @@ nosex="";
 nosey="";
 
 function preload() {
+    img=loadImage("https://i.postimg.cc/XqZ13wjV/Clown-Nose.png")
 }
 
 function setup() {
@@ -12,10 +13,6 @@ function setup() {
     video.hide();
     posenet=ml5.poseNet(video,modelloaded);
     posenet.on('pose',getposes);
-}
-
-function draw() {
-    image(video,0,0,500,500);
 }
 
 function TakaSnapshot() {
@@ -34,4 +31,11 @@ function getposes(results) {
         console.log("nosex="+nosex);
         console.log("nosey="+nosey);
     }
+}
+
+function draw() {
+    image(video,0,0,500,500);
+    fill("red")
+    stroke("brown")
+    circle(nosex, nosey, 30)
 }
